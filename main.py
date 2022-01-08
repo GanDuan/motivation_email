@@ -20,14 +20,14 @@ finally:
 now = dt.datetime.now()
 now_weekday = now.weekday()
 
-my_email = "gan.duan001@gmail.com"
-password = "zswdmm111"
-receiver = "gan.duan1993@gmail.com"
+my_email = YOUR_EMAIL@gmail.com
+password = YOUR_PASSWORD
+receiver = RECEIVER_EMAIL
 
 with smtplib.SMTP("smtp.gmail.com", port=587) as connection:
     connection.starttls()
     connection.login(user=my_email, password=password)
-    if now_weekday == 3:
+    if now_weekday == 1:
         message = sentence
         connection.sendmail(from_addr=my_email, to_addrs=receiver, msg=f"Subject:Monday motivation\n\n{message}")
 #
